@@ -4,17 +4,8 @@ server:
 spring:
   data:
     mongodb:
-      authentication-database:  # Authentication database name.
-      database: test # Database name.
-      field-naming-strategy: # Fully qualified name of the FieldNamingStrategy to use.
-      grid-fs-database: # GridFS database name.
-      host: localhost # Mongo server host.
-      password: # Login password of the mongo server.
-      port: 27017 # Mongo server port.
-      repositories:
-        enabled: true # Enable Mongo repositories.
-      uri: mongodb://localhost/test # Mongo database URI. When set, host and port are ignored.
-      username: # Login user of the mongo server.
+      uri: "mongodb://freitinhas:102030@clusternode01-shard-00-00-7inmr.mongodb.net:27017,clusternode01-shard-00-01-7inmr.mongodb.net:27017,clusternode01-shard-00-02-7inmr.mongodb.net:27017/test?ssl=true&replicaSet=ClusterNode01-shard-0&authSource=admin&retryWrites=true"
+
 
 eureka:
   instance:
